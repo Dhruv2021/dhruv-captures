@@ -1,0 +1,247 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+
+  }
+
+  .white-custom-cursor {
+    display: none;
+}
+
+  .grid-container {
+    columns: 5 200px;
+    column-gap: 1.5rem;
+    width: 90%;
+    margin: 60px;
+ 
+    
+    div {
+      width: 150px;
+      margin: 0 1.5rem 1.5rem 0;
+      display: inline-block;
+      width: 100%;
+      border: solid 2px rgb(255, 254, 254);
+      padding: 5px;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      border-radius: 5px;
+      transition: all .25s ease-in-out;
+      &:hover img {
+        filter: grayscale(0);
+      }
+      &:hover {
+        border-color: coral;
+      }
+      img {
+        width: 100%;
+        filter: grayscale(100%);
+        border-radius: 5px;
+        transition: all .25s ease-in-out;
+      }
+      p {
+        margin: 5px 0;
+        padding: 0;
+        text-align: center;
+        font-style: italic;
+        color: coral;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+
+    .grid-container{
+        margin-left: 13%;
+    }
+
+    img {
+      filter: none !important; /* Remove the grayscale filter */
+    }
+  
+    div:hover {
+      border-color: transparent; /* Remove hover effect on borders */
+    }
+    
+    .menu-list {
+        display: none; /* Hide the menu list on smaller screens initially */
+    }
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+        cursor: pointer;
+    }
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: aliceblue;
+        margin: 5px;
+        transition: 0.4s;
+    }
+    .change .bar:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .menu-list.active {
+        display: block; /* Show the menu list when menu icon is clicked */
+    }
+    .social-icons {
+        display: none;
+    }
+
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1001; 
+}
+
+footer p {
+    margin: 0;
+    color: aliceblue;
+}
+
+.foot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.loader1 {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background: #FFF;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .loader1:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg) translate(30%, 40%);
+    background: #ff9371;
+    box-shadow: 32px -34px 0 5px #ff3d00;
+    animation: slide 2s infinite ease-in-out alternate;
+  }
+  
+  .loader1:after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff3d00;
+    transform: rotate(0deg);
+    transform-origin: 35px 145px;
+    animation: rotate 2s infinite ease-in-out;
+  }
+  
+  @keyframes slide {
+    0% , 100% {
+      bottom: -35px
+    }
+  
+    25% , 75% {
+      bottom: -2px
+    }
+  
+    20% , 80% {
+      bottom: 2px
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(-15deg)
+    }
+  
+    25% , 75% {
+      transform: rotate(0deg)
+    }
+  
+    100% {
+      transform: rotate(25deg)
+    }
+  }
+    
+  .loader1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Ensure it's above other content */
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    img {
+      filter: none !important; /* Remove the grayscale filter */
+    }
+  
+    div:hover {
+      border-color: transparent; /* Remove hover effect on borders */
+    }
+  }

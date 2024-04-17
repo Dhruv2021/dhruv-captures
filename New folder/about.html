@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="./Assets/WhatsApp_Image_2024-04-04_at_1.24.29_PM-removebg-preview.png"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Lao+Looped:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Kreon:wght@300..700&family=Noto+Sans+Lao+Looped:wght@100..900&family=Protest+Strike&display=swap"
+        rel="stylesheet">
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <div class="white-custom-cursor"></div>
+    <link rel="stylesheet" href="about.css">
+    <script src="about.js"></script>
+
+    <div class="loaderx"></div>
+      
+    <div class="contentx" style="display: none;">
+    <title>About-Dhruv.K</title>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com/Dhruv2021"><i class="fab fa-github"></i></a>
+                <a href="https://discord.com/channels/@itzfantomx"><i class="fab fa-discord"></i></a>
+                <a href="https://www.instagram.com/dhruvxkaushik/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <h1>DHRUV KAUSHIK</h1>
+            <div class="menu-icon" id="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu-list">
+                <li><a href="./main.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./test.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Overlay for full-screen black background -->
+    <div class="overlay" id="overlay">
+        <img src="./Assets/WhatsApp_Image_2024-04-04_at_1.24.29_PM-removebg-preview.png" class="logo"> <!-- Logo -->
+        <button class="close-btn">Close</button> <!-- Close button -->
+        <ul class="menu-list">
+            <li><a href="./main.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./test.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="social-icons-overlay">
+            <a href="https://github.com/Dhruv2021"><i class="fab fa-github"></i></a>
+            <a href="https://discord.com/channels/@itzfantomx"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/dhruvxkaushik/"><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </div>
+
+    </head>
+
+    <div class="container">
+
+        <body>
+           
+                <div class="intro-text">
+                    <h1>MEET DHRUV KAUSHIK</h1>
+                    <img src="./Assets/IMGP3729-01.jpeg" alt="Your Image" class="left-image">
+                    <p>
+                        Greetings and a heartfelt welcome to my corner of the internet! I'm a traveler,
+                        nature aficionado, and passionate photographer.<br><br>
+
+                        As someone who's always had an insatiable wanderlust, I've been fortunate enough to explore
+                        diverse landscapes, from rugged mountains to tranquil forests and everything in between. Each
+                        photograph I capture is a testament to the breathtaking beauty and boundless diversity of our
+                        planet.<br><br>
+
+                        I strive to not only capture stunning imagery but also convey the emotions and experiences
+                        behind each photograph. Whether it's the
+                        golden hues of a sunrise over the savannah or the delicate petals of a wildflower in bloom,
+                        every image holds a story waiting to be shared.<br><br>
+
+                        Beyond photography, I'm also deeply passionate about coding, blending my technical skills with
+                        my creative pursuits to push the boundaries of visual storytelling. Through innovative
+                        techniques and digital enhancements, I aim to create immersive experiences that transport
+                        viewers to the heart of the moment captured.<br><br>
+
+                    </p>
+                </div>
+            </div>
+            <style>
+                #element {
+                    color: aliceblue;
+                }
+
+                .overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: black;
+                    /* Set the background color to black */
+                    display: none;
+                    /* Initially hidden */
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                    /* Ensure it's above other content */
+                    animation: fadeInOverlay 0.5s ease forwards;
+                    /* Add animation */
+                    opacity: 0;
+                    /* Start with opacity 0 */
+                }
+
+                .overlay.active {
+                    display: flex;
+                    /* Show the overlay when active */
+                }
+
+                @keyframes fadeInOverlay {
+                    from {
+                        opacity: 0;
+                        /* Start with opacity 0 */
+                    }
+
+                    to {
+                        opacity: 1;
+                        /* Fade in to fully visible */
+                    }
+                }
+
+                .overlay .menu-list {
+                    display: flex;
+                    flex-direction: column;
+                    /* Align links vertically */
+                    text-align: center;
+                    /* Center align text */
+                }
+
+                .overlay .menu-list li {
+                    margin: 20px 0;
+                    /* Add spacing between links */
+                }
+
+                .overlay .menu-list li a {
+                    color: aliceblue;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    transition: color 0.3s ease;
+                }
+
+                .close-btn {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background-color: transparent;
+                    border: none;
+                    color: aliceblue;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    z-index: 1001;
+                    /* Ensure the button is above the overlay */
+                }
+
+                .close-btn:hover {
+                    color: #ccc;
+                    /* Light grey color on hover */
+                }
+            </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.querySelector('.close-btn');
+
+        menuIcon.addEventListener('click', function () {
+            overlay.classList.toggle('active');
+        });
+
+        closeBtn.addEventListener('click', function () {
+            overlay.classList.remove('active');
+        });
+    });
+</script>
+
+
+            <script>document.addEventListener('DOMContentLoaded', function () {
+                    const cursor = document.querySelector('.white-custom-cursor');
+
+                    document.addEventListener('mousemove', function (e) {
+                        cursor.style.left = e.pageX + 'px';
+                        cursor.style.top = e.pageY + 'px';
+                    });
+                });
+            </script>
+            </div>
+        </body>
+
+</html>
+</div>
+<footer>
+    <div class="foot">
+        <p
+            style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            &copy; DhruvKaushik. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+
+
+
+
+</html>

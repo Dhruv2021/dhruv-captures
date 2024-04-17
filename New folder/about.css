@@ -1,0 +1,260 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+.white-custom-cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    pointer-events: none; /* Ensure it doesn't interfere with mouse events on content */
+    z-index: 9999; /* Ensure it's above other content */
+}
+.contentx {
+    display: flex;
+    /* align-items: baseline; */
+    /* text-shadow: none; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.left-image {
+    width: 20%;
+    max-width: 400px; /* Adjust as needed */
+    margin-right: 20px;
+    transform: translateY(10%);
+    border-radius: 10px;
+}
+
+.text {
+    color: white;
+    width: 50%;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.intro-text{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style:normal;
+    color:aliceblue;
+    max-width: 500px; /* Set maximum width */
+
+}
+
+.container{
+    background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-image {
+        position: absolute;
+        top: 9;
+        right: 10%;
+        width: auto;
+        height: 50%;
+        /* mix-blend-mode: normal; */
+        /* opacity: 0; */
+
+    }
+
+    .intro-text {
+        width: 50%;
+        max-width: none;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .loaderx {
+        font-size: 1em; /* Reduce font size for smaller screens */
+      }
+    
+      .loaderx > * {
+        margin-right: 0.1em; /* Add some space between elements */
+      }
+    
+
+    .menu-list {
+        display: none; /* Hide the menu list on smaller screens initially */
+    }
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+        cursor: pointer;
+    }
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: aliceblue;
+        margin: 5px;
+        transition: 0.4s;
+    }
+    .change .bar:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .menu-list.active {
+        display: block; /* Show the menu list when menu icon is clicked */
+    }
+    .social-icons {
+        display: none;
+    }
+
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .left-image {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 400px; /* Max width as needed */
+        margin-top: 20px; /* Adjust margin as needed */
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
+
+    .content {
+        flex-direction: column-reverse; /* Reverse the order on smaller screens */
+    }
+
+    .intro-text {
+        text-align: left; /* Center-align text on smaller screens */
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1001; 
+}
+
+footer p {
+    margin: 0;
+    color: aliceblue;
+}
+
+.foot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.loaderx {
+    width: 84px;
+    height: 84px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .loaderx:before , .loaderx:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: yellow;
+    transform: translate(-50% , 100%)  scale(0);
+    animation: push_4051 2s infinite ease-in;
+  }
+  
+  .loaderx:after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes push_4051 {
+    0% {
+      transform: translate(-50% , 100%)  scale(1);
+    }
+  
+    15% , 25% {
+      transform: translate(-50% , 50%)  scale(1);
+    }
+  
+    50% , 75% {
+      transform: translate(-50%, -30%) scale(0.5);
+    }
+  
+    80%,  100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+      
+  .loaderx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Ensure it's above other content */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+

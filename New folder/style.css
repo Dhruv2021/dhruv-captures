@@ -1,0 +1,456 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    /* overflow: hidden; */
+    background-color: black;
+    
+
+}
+.white-custom-cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    pointer-events: none; /* Ensure it doesn't interfere with mouse events on content */
+    z-index: 9999; /* Ensure it's above other content */
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 1000; /* Ensure it's above other content */
+    /* transition: background-color 0.3s ease; */
+    color: aliceblue;
+}
+
+.container {
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 10 ;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container h1 {
+    margin: 0;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    margin-left: 13%;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: "Noto Sans Lao Looped", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 20px; /* Add spacing between anchor tags */
+}
+
+ul li:first-child {
+    margin-left: auto; /* Push the first anchor tag to the extreme right */
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    transition: color 3s ease;
+    position: relative;
+    /* position: relative; */
+}
+
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust the position of the underline */
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: #FFF; /* Color of the underline */
+    transition: width 0.3s ease; /* Animation for the underline */
+}
+
+ul li a:hover::before {
+    width: 100%; /* Expand the underline to cover the text */
+}
+
+a:hover {
+    color: #949494;
+    transition: 1s ease;
+    cursor: none;
+}
+a:hover.custom-cursor{
+    color: blue;
+}
+.svg{
+    display: flex;
+    margin-left: 0px;
+}
+
+.slider {
+    max-width: 100%;
+    overflow: hidden; /* Prevents scrolling */
+    position: relative;
+    height: 100vh;
+}
+
+.slider img {
+    width: 100%;
+    /* filter: grayscale(100%) brightness(70%);         */
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.centered-textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 0; /* Initially make the text box transparent */
+    animation: fadeIn 3s ease forwards; /* Apply fadeIn animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with transparency */
+    }
+    to {
+        opacity: 1; /* Fade in to fully visible */
+    }
+}
+
+.centered-textbox h2, span {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.centered-textbox p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing */
+    size: 10px;
+}
+
+.social-icons a {
+    color: aliceblue;
+    font-size: 20px;
+    margin-right: 10px; /* Adjust spacing */
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+.bottom-line {
+    position: absolute;
+    bottom: 0;
+    color: aliceblue;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1001; /* Ensure the logo is above the overlay */
+}
+
+.social-icons-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-icons-overlay a {
+    color: aliceblue;
+    font-size: 20px;
+    margin-right: 10px; /* Adjust spacing */
+}
+
+.social-icons-overlay a:hover {
+    color: #333;
+}
+
+.menu-icon.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fade-out-overlay {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+    pointer-events: none; /* Disable pointer events during fade-out */
+}
+
+.pl {
+    display: block;
+    width: 9.375em;
+    height: 9.375em;
+  }
+  
+  .pl__arrows,
+  .pl__ring-rotate,
+  .pl__ring-stroke,
+  .pl__tick {
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .pl__arrows {
+    animation-name: arrows42;
+    transform: rotate(45deg);
+    transform-origin: 16px 52px;
+  }
+  
+  .pl__ring-rotate,
+  .pl__ring-stroke {
+    transform-origin: 80px 80px;
+  }
+  
+  .pl__ring-rotate {
+    animation-name: ringRotate42;
+  }
+  
+  .pl__ring-stroke {
+    animation-name: ringStroke42;
+    transform: rotate(-45deg);
+  }
+  
+  .pl__tick {
+    animation-name: tick42;
+  }
+  
+  .pl__tick:nth-child(2) {
+    animation-delay: -1.75s;
+  }
+  
+  .pl__tick:nth-child(3) {
+    animation-delay: -1.5s;
+  }
+  
+  .pl__tick:nth-child(4) {
+    animation-delay: -1.25s;
+  }
+  
+  .pl__tick:nth-child(5) {
+    animation-delay: -1s;
+  }
+  
+  .pl__tick:nth-child(6) {
+    animation-delay: -0.75s;
+  }
+  
+  .pl__tick:nth-child(7) {
+    animation-delay: -0.5s;
+  }
+  
+  .pl__tick:nth-child(8) {
+    animation-delay: -0.25s;
+  }
+  
+  /* Animations */
+  @keyframes arrows42 {
+    from {
+      transform: rotate(45deg);
+    }
+  
+    to {
+      transform: rotate(405deg);
+    }
+  }
+  
+  @keyframes ringRotate42 {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(720deg);
+    }
+  }
+  
+  @keyframes ringStroke42 {
+    from,
+      to {
+      stroke-dashoffset: 452;
+      transform: rotate(-45deg);
+    }
+  
+    50% {
+      stroke-dashoffset: 169.5;
+      transform: rotate(-180deg);
+    }
+  }
+  
+  @keyframes tick42 {
+    from,
+      3%,
+      47%,
+      to {
+      stroke-dashoffset: -12;
+    }
+  
+    14%,
+      36% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+
+
+/* Your existing CSS here */
+
+
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .white-custom-cursor{
+        display: none;
+    }
+    
+    .menu-list {
+        display: none; /* Hide the menu list on smaller screens initially */
+    }
+    .menu-icon {
+        display: block; /* Show the menu icon on smaller screens */
+        cursor: pointer;
+    }
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: aliceblue;
+        margin: 5px;
+        transition: 0.4s;
+    }
+    .change .bar:nth-child(1) {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .change .bar:nth-child(3) {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .menu-list.active {
+        display: block; /* Show the menu list when menu icon is clicked */
+    }
+    .social-icons {
+        display: none;
+    }
+    
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+    
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+    
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    /* Add transition to the navbar heading for smooth animation */
+    .navbar h1 {
+        transition: opacity 0.5s ease;
+    }
+    
+    /* Make the heading disappear when the .menu-list is active */
+    .menu-list.active + h1 {
+        opacity: 0;
+    }
+    
+    /* Make the navbar links display horizontally */
+    .menu-list.active {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .bottom-line{
+        font-size: 10px;
+        bottom: 3%;
+        text-align: center;
+
+    }
+    .centered-textbox p{
+        font-size: 15px;
+    }
+    
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Ensure it's above other content */
+}
+
