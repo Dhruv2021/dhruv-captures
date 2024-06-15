@@ -1,9 +1,9 @@
-
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
     const images = document.querySelectorAll('.slider img');
-    
+    const loader = document.querySelector('.loader');
+    const content = document.querySelector('.content');
+
     function showImage(index) {
         images.forEach((img, i) => {
             if (i === index) {
@@ -22,34 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         showImage(currentIndex);
     }
 
-    // Show the first image initially
-    showImage(currentIndex);
-
-    // Change image every 4 seconds (4000 milliseconds)
-    setInterval(nextImage, 4000);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuIcon = document.getElementById('menu-icon');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.querySelector('.close-btn');
-    
-    menuIcon.addEventListener('click', function () {
-        overlay.classList.toggle('active');
-        menuIcon.classList.add('fade-out'); // Add fade-out class
-    });
-
-    closeBtn.addEventListener('click', function () {
-        overlay.classList.remove('active');
-        menuIcon.classList.remove('fade-out'); // Remove fade-out class
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const loader = document.querySelector('.loader');
-    const content = document.querySelector('.content');
-
     // Function to hide loader and show content
     function hideLoader() {
         loader.style.display = 'none';
@@ -63,12 +35,30 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(hideLoader, duration);
     }
 
-    // Show the loader for 2 seconds in all scenarios
+    // Show the loader for 3 seconds in all scenarios
     showLoader(3000);
+
+    // Show the first image initially
+    showImage(currentIndex);
+
+    // Change image every 4 seconds (4000 milliseconds)
+    setInterval(nextImage, 4000);
+
+    // Preload images and then hide the loader
+    let imagesLoaded = 0;
+
+    images.forEach((img) => {
+        img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === images.length) {
+                hideLoader();
+            }
+        };
+        img.onerror = () => {
+            imagesLoaded++;
+            if (imagesLoaded === images.length) {
+                hideLoader();
+            }
+        };
+    });
 });
-
-
-
-
-
-
