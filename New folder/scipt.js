@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show the first image initially
     showImage(currentIndex);
 
-    // Change image every 3 seconds (3000 milliseconds)
-    setInterval(nextImage, 3000);
+    // Change image every 4 seconds (4000 milliseconds)
+    setInterval(nextImage, 4000);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Show the loader for 2 seconds in all scenarios
-    showLoader(1500);
+    showLoader(3000);
 });
 
 
