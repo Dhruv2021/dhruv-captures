@@ -1,17 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('.loader1');
-    const content = document.querySelector('.grid-container');
-    const nav = document.querySelector('.navbar');
+    const content = document.querySelector('.container3');
+    const foot = document.querySelector('.foot');
 
-    // Initially hide the content
-    content.style.display = 'none';
-    nav.style.display = 'none';
-
-    // Hide the loader after 3 seconds
-    setTimeout(function() {
+    // Function to hide loader and show content
+    function hideLoader() {
         loader.style.display = 'none';
-        // Show the content once the loader is hidden
         content.style.display = 'block';
-        nav.style.display = 'block';
-    }, 3000);
+        foot.style.display = 'block';
+    }
+
+    // Function to show loader for the specified duration
+    function showLoader(duration) {
+        loader.style.display = 'block';
+        content.style.display = 'none';
+        foot.style.display = 'none';
+        setTimeout(hideLoader, duration);
+    }
+
+    // Show the loader for 2 seconds in all scenarios
+    showLoader(1000);
 });
