@@ -1,18 +1,15 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: sans-serif;
-    cursor: default;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
+body{
+  cursor: none;
+}
 
-  }
-
-  .white-custom-cursor {
-    display: none;
+.white-custom-cursor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  pointer-events: none; /* Ensure it doesn't interfere with mouse events on content */
+  z-index: 9999; /* Ensure it's above other content */
 }
 
   .grid-container {
