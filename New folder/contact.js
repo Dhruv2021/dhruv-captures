@@ -19,5 +19,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Show the loader for 2 seconds in all scenarios
-    showLoader(2000);
+    showLoader(1000);
 });
